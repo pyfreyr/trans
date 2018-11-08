@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pyfreyr/trans:v0.0.1
+    ports:
+      - 8001:8888
+    command: python trans_server.py
