@@ -74,6 +74,6 @@
 
 ## CHANGELOG
 ### 2018-11-9 18:22:41
-- 修复 baidu 和 niutrans API 错误，感谢 @672399809 反馈
+- 修复 baidu 和 niutrans API 错误，感谢 @672399809(xstring) 反馈
 
 
