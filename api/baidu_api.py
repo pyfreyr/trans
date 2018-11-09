@@ -29,7 +29,7 @@ def parse(response, **kwargs):
     if response['status'] == 0:
         try:
             data = json.loads(response.pop('data'))
-            targets = [t['dst'] for t in data]
+            targets = [t['dst'] for t in data['data']]
         except (JSONDecodeError, KeyError, AttributeError) as e:
             response.update(status=1, error=e)
         else:
