@@ -7,8 +7,8 @@ async def get_content(request, **kwargs):
     res = {}
     try:
         response = await client.fetch(request, **kwargs)
-    except (httpclient.HTTPError, Exception) as e:
-        res.update(status=1, error=e)
+    except httpclient.HTTPError as e:
+        res.update(status=1, error=str(e))
     else:
         res.update(status=0, data=response.body.decode(errors='ignore'))
     return res

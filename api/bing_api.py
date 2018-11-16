@@ -28,7 +28,7 @@ def parse(response, **kwargs):
             data = json.loads(response.pop('data'))
             target = data['translationResponse']
         except (JSONDecodeError, KeyError) as e:
-            response.update(status=1, error=e)
+            response.update(status=1, error=str(e))
         else:
             response.update(target=target)
             response.update(**kwargs)
