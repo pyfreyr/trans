@@ -73,6 +73,10 @@
         $ docker-compose up -d
 
 ## CHANGELOG
+
+### 2018-11-16 10:47:41
+- 修复 client 异常捕获不全问题
+
 ### 2018-11-9 18:22:41
 - 修复 baidu 和 niutrans API 错误，感谢 @672399809(xstring) 反馈
 
